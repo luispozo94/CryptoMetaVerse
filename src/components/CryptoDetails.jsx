@@ -12,17 +12,18 @@ import Loader from './Loader';
 const { Title, Text } = Typography;
 const { Option } = Select;
 
+//This component is handling the nested routing. It will render that history of the coin in a chart graph and links at the footer
 const CryptoDetails = () => {
 	const { coinId } = useParams(); //takes the id from the URL
 	const [timePeriod, setTimePeriod] = useState('7d');
-  const { data, isFetching } = useGetCryptoDetailsQuery( coinId);
-	const { data: coinHistory } = useGetCryptoHistoryQuery({coinId, timePeriod});
+	const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
+	const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timePeriod });
 	const cryptoDetails = data?.data?.coin;
 
-  if (isFetching) return <Loader />;
-
+	if (isFetching) return <Loader />;
+	//array with time periods for user choice inside of placeholder
 	const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
-
+	//array stats show case extra data a user would like to see
 	const stats = [
 		{ title: 'Price to USD', value: `$ ${cryptoDetails.price && millify(cryptoDetails.price)}`, icon: <DollarCircleOutlined /> },
 		{ title: 'Rank', value: cryptoDetails.rank, icon: <NumberOutlined /> },
@@ -30,7 +31,7 @@ const CryptoDetails = () => {
 		{ title: 'Market Cap', value: `$ ${cryptoDetails.marketCap && millify(cryptoDetails.marketCap)}`, icon: <DollarCircleOutlined /> },
 		{ title: 'All-time-high(daily avg.)', value: `$ ${millify(cryptoDetails.allTimeHigh.price)}`, icon: <TrophyOutlined /> },
 	];
-
+	//array stats show case extra data a user would like to see
 	const genericStats = [
 		{ title: 'Number Of Markets', value: cryptoDetails.numberOfMarkets, icon: <FundOutlined /> },
 		{ title: 'Number Of Exchanges', value: cryptoDetails.numberOfExchanges, icon: <MoneyCollectOutlined /> },
@@ -55,7 +56,7 @@ const CryptoDetails = () => {
 					<Option key={date}> {date}</Option>
 				))}
 			</Select>
-      <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
+			<LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
 			<Col className="stats-container">
 				<Col className="coin-value-statistics">
 					<Col className="coin-value-statistics-heading">
@@ -99,22 +100,21 @@ const CryptoDetails = () => {
 						{HTMLReactParser(cryptoDetails.description)}
 					</Title>
 				</Row>
-        <Col className="coin-links">
-              <Title level={3} className="coin-details-heading">
-              {cryptoDetails.name} Links
-              </Title>
-              {cryptoDetails.links?.map((link)=> (
-                    <Row className="coin-link" key={link.name}>
-                    <Title level={5} className="link-name">
-                    {link.type}
-                    </Title>
-                    <a href={link.url} target="_blank" rel="noreferrer">
-                       
-                    {link.name}
-                    </a>
-                    </Row>
-              ))}
-        </Col>
+				<Col className="coin-links">
+					<Title level={3} className="coin-details-heading">
+						{cryptoDetails.name} Links
+					</Title>
+					{cryptoDetails.links?.map((link) => (
+						<Row className="coin-link" key={link.name}>
+							<Title level={5} className="link-name">
+					{link.type}
+							</Title>
+							<a href={link.url} target="_blank" rel="noreferrer">
+								{link.name}
+							</a>
+						</Row>
+					))}
+				</Col>
 			</Col>
 		</Col>
 	);

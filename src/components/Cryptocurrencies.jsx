@@ -5,7 +5,7 @@ import { Card, Row, Col, Input } from 'antd';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import Loader from './Loader';
-
+//Created a functional component that will display crypto coins
 const Cryptocurrencies = ({ simplified }) => {
 	const count = simplified ? 10 : 100;
 	const { data: cryptosList, isFetching } = useGetCryptosQuery(count);

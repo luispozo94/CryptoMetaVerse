@@ -30,7 +30,7 @@ const Exchanges = () => {
 							<Panel
 								key={exchange.id}
 								showArrow={false}
-								header={
+								header={(
 									<Row key={exchange.id}>
 										<Col span={6}>
 											<Text>
@@ -41,11 +41,11 @@ const Exchanges = () => {
 												<strong>{exchange.name}</strong>
 											</Text>
 										</Col>
-										<Col span={6}>${millify(exchange.volume)}</Col>
+										<Col span={6}> $ {millify(exchange.volume)}</Col>
 										<Col span={6}>{millify(exchange.numberOfMarkets)}</Col>
-										<Col span={6}>{millify(exchange.marketShare)}%</Col>
+										<Col span={6}>{millify(exchange.marketShare)} % </Col>
 									</Row>
-								}
+								)}
 							>
 								{HTMLReactParser(exchange.description || '')}
 							</Panel>

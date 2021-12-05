@@ -3,11 +3,10 @@ import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
 import moment from 'moment';
 
 
-import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
-import { useGetCryptosQuery } from '../services/cryptoApi';
+import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';//imported CryptosNews to get add to the amount of cryptos per page
+import { useGetCryptosQuery } from '../services/cryptoApi';//imported Cryptos to get an amount of cryptos per page
 
 const { Text, Title } = Typography;
-
 const { Option } = Select;
 //demo image if theres no image available
 const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
@@ -16,9 +15,9 @@ const News = ({ simplified }) => {
 	const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
 	const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
 	const { data } = useGetCryptosQuery(100);
-
+//if there no news render 'loading' until info is available
 	if (!cryptoNews?.value) return 'loading...';
-	
+	//placeholder will render 100 coins
   return (
 		<Row gutter={[24, 24]}>
 			{!simplified && (

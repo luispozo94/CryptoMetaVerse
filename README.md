@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+#                                             <h2 align="center"> Crypto Meta Verse </h2>                                                      
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ <h3 align='center' > Developed a front end single page application(SPA) that allows crypto enthusiast keep up with trends, news and coin price history. </h3>       
 
-## Available Scripts
 
+
+https://user-images.githubusercontent.com/69587570/144542436-12ea4522-6004-457e-bc1f-e7780875202a.mov
+
+
+ <h2 align='center' > Getting started </h2>
+Fork repo to your local machine.
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h3 align='center' > You have access to charts to track a specific crypto coin value history. </h3>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screen Shot 2021-12-02 at 7 52 04 PM](https://user-images.githubusercontent.com/69587570/144541531-38d79850-0dfa-49d6-84a1-e4470c108709.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+<h3 align='center' >Users can keep up to date with trends, news in the crypto meta verse </h3>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Screen Shot 2021-12-02 at 7 58 58 PM](https://user-images.githubusercontent.com/69587570/144541329-9d93e185-41c4-45c9-99ad-9ca1a8407a03.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

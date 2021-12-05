@@ -3,6 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { cryptoApi } from '../services/cryptoApi';
 import { cryptoNewsApi } from '../services/cryptoNewsApi'
 
+//redux boilerplate pass in the query function. cryptoApi/cryptoNewsApi
 export default configureStore({
 	reducer: {
 		[cryptoApi.reducerPath]: cryptoApi.reducer,

@@ -4,12 +4,13 @@ import { Line } from 'react-chartjs-2';
 import { Col, Row, Typography } from 'antd';
 
 const { Title } = Typography;
-
+//created a functional component that will create a chart/graph
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
+	//declared two arrays literal to keep track of price and time
 	const coinPrice = [];
 	const coinTimestamp = [];
 
-	//looping until we reach the end of coinHistory
+	//looping until we reach the end of coinHistory ==> optional chaining 
 	for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
 		coinPrice.push(coinHistory?.data?.history[i].price);
 	}
@@ -17,7 +18,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 	for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
 		coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp).toLocaleDateString());
 	}
-
+//constructed and filled out chart.js boilerplate
 	const data = {
 		labels: coinTimestamp,
 		datasets: [
@@ -42,7 +43,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 			],
 		},
 	};
-
+//passed down the data and options objs
 	return (
 		<>
 			<Row className="chart-header">
