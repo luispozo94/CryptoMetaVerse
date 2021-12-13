@@ -2,6 +2,7 @@
   "name": "crypto-tracker-redux",
   "version": "0.1.0",
   "private": true,
+  "homepage": "",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@reduxjs/toolkit": "^1.6.2",
@@ -11,6 +12,7 @@
     "antd": "^4.17.2",
     "axios": "^0.24.0",
     "chart.js": "^3.5.1",
+    "gh-pages": "^3.2.3",
     "html-react-parser": "^1.4.1",
     "millify": "^4.0.0",
     "moment": "^2.29.1",

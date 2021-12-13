@@ -23,7 +23,7 @@ In the project directory, you can run:
 ![Screen Shot 2021-12-02 at 7 52 04 PM](https://user-images.githubusercontent.com/69587570/144541531-38d79850-0dfa-49d6-84a1-e4470c108709.png)
 
 
-<h3 align='center' >Users can keep up to date with trends, news in the crypto meta verse </h3>
+<h3 align='center' >Users can up to date with trends, news in the crypto meta verse </h3>
 
 ![Screen Shot 2021-12-02 at 7 58 58 PM](https://user-images.githubusercontent.com/69587570/144541329-9d93e185-41c4-45c9-99ad-9ca1a8407a03.png)
 
